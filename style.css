@@ -11,10 +11,6 @@ body{
     height: 100vh;
     overflow: auto;
 }
-main{
-    height: 100vh;
-    position: relative;
-}
 .inputbox{
     position: absolute;
     bottom: 0;
@@ -24,6 +20,7 @@ main{
     margin: 10px;
 }
 
+<<<<<<< HEAD
 .container-fluid{
  background-image: url(/img/71V5w9iF6TL._AC_SX679_.jpg);
    background-repeat: no-repeat;
@@ -84,6 +81,8 @@ main{
 	wdith: 100%;
 	padding: 10px;
 } */
+=======
+>>>>>>> ffa6f0862bddd5b905e3c553c8915650760fa223
 .dropdown-toggle::after {
     display: none;
     margin-left: 0.255em;

@@ -1,69 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<form id="myForm" class="p-3 px-4 fs-6 fw-bold bg-transparent border-3" style="width: 400px; border-radius: 20px;"
+        action="index.html" method="get">
+        <div class="text-center mb-3">
+            <h2>Create Your Account</h2>
+        </div>
+        <div class="input-group">
+            <label for="username" class="mb-2" style="margin-bottom: 20px 0;">User Name</label>
+            <input type="text" name="username" class="form-control d-block w-100" id="username" placeholder="username">
+            <small>name must me 5 or 15 character</small>
+        </div>
+        <div class="input-group " style="margin-bottom: 20px 0;">
+            <label for="email" class="d-inline-block" style="margin-bottom: 5px; ">Email</label>
+            <input type="email" name="email" class="form-control d-block w-100" id="email" placeholder="email">
+            <small>provide a valid email address</small>
+        </div>
+        <div class="input-group " style="margin-bottom: 20px 0;">
+            <label for="password" class="mb-2">Password</label>
+            <input type="password" name="password" class="form-control d-block w-100 " id="password"
+                placeholder="password">
+            <small></small>
+        </div>
+        <div class="input-group" style="margin-bottom: 20px 0;">
+            <label for="confirmpassword" class="mb-2">Confirmpassword</label>
+            <input type="password" name="confirmpassword" class="form-control d-block w-100 " id="confirmpassword"
+                placeholder="confirmpassword">
+            <small></small>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Remember Me
+                <p id="message"></p>
+            </label>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- style css link -->
-    <link rel="stylesheet" href="../style.css">
-    <title>Sign in</title>
-</head>
+        </div>
+        <button class="btn btn-primary text-center" type="submit">
+            Login
+        </button>
+        <p class="text-center">Don't have an account?
 
-<body>
-
-    <!--  -->
-    <div class="container-fluid d-flex vh-100 justify-content-center align-items-center">
-       
-        <form id="myForm" class="p-4 fs-6 fw-bold bg-info border-3" style="width: 400px; border-radius: 20px;" action="index.html" method="get">
-            <div class="text-center mb-3 mt-4">
-                <h2>Create Your Account</h2>
-            </div>
-            <div class="input-group">
-                <label for="username" class="mb-2" style="margin-bottom: 20px 0;" >User Name</label>
-                <input type="text" name="username" class="form-control d-block w-100" id="username" placeholder="username">
-                <small>name must me 5 or 15 character</small>
-            </div>
-            <div class="input-group " style="margin-bottom: 20px 0;">
-                <label for="email" class="d-inline-block" style="margin-bottom: 5px; ">Email</label>
-                <input type="email" name="email" class="form-control d-block w-100" id="email" placeholder="email">
-                <small>provide a valid email address</small>
-            </div>
-            <div class="input-group " style="margin-bottom: 20px 0;" >
-                <label for="password" class="mb-2">Password</label>
-                <input type="password" name="password" class="form-control d-block w-100 " id="password" placeholder="password">
-                <small></small>
-            </div>
-            <div class="input-group" style="margin-bottom: 20px 0;" >
-                <label for="confirmpassword" class="mb-2">Confirmpassword</label>
-                <input type="password" name="confirmpassword" class="form-control d-block w-100 " id="confirmpassword" placeholder="confirmpassword">
-                <small></small>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Remember Me
-                    <p id="message"></p>
-                </label>
-              
-            </div>
-            <button class="btn btn-primary text-center" type="submit">
-                Login
-            </button>
-            <p class="text-center">Don't have an account?
-                
-                <span class="text-primary"><a href="./signin.html">Sign Up</a></span>
-            </p>
-            <p class="text-center text-primary">Forgot your password?</p>  
-         </form>
-
-    </div>
-    
-
-
-
-    <script src="../js/signin.js"></script>
-</body>
-
-</html>
+            <span class="text-primary"><a href="./signin.html">Sign Up</a></span>
+        </p>
+        <p class="text-center text-primary">Forgot your password?</p>
+    </form>
