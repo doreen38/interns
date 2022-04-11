@@ -1,7 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-height: 100vh;
+    height: 100vh;
+}
+.users{
+    height: 100vh;
+    overflow: auto;
+}
+main{
+    height: 100vh;
+    position: relative;
+}
+.inputbox{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 10px;
+}
 
-.container-fluid{
-    background-image: url(/img/71V5w9iF6TL._AC_SX679_.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   
+.dropdown-toggle::after {
+    display: none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
 }
