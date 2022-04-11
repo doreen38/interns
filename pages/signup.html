@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,42 +10,60 @@
     <link rel="stylesheet" href="../style.css">
     <title>Sign in</title>
 </head>
-<body>
-    <div class="container-fluid vh-100">
-        <div class="row">  
-            <div class=" col-md-4 offset-4 rounded d-flex justify-content-start">
-                <div class="signup-form ">
-                    <form action="" class="mt-5 border p-4 bg-light shadow">
-                        <h4 class="mb-5 text-secondary">Create Your Account</h4>
-                        <div class="row">
-                            <div class="mb-3 col-md-6">
-                                <label>First Name<span class="text-danger">*</span></label>
-                                <input type="text" name="fname" class="form-control" placeholder="Enter First Name">
-                            </div>
-    
-                            <div class="mb-3 col-md-6">
-                                <label>Last Name<span class="text-danger">*</span></label>
-                                <input type="text" name="Lname" class="form-control" placeholder="Enter Last Name">
-                            </div>
-    
-                            <div class="mb-3 col-md-12">
-                                <label>Password<span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" placeholder="Enter Password">
-                            </div>
-                            <div class="mb-3 col-md-12">
-                                <label>Confirm Password<span class="text-danger">*</span></label>
-                                <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
-                            </div>
-                            <div class="col-md-12">
-                               <button class="btn btn-primary float-end">Sign in Now</button>
-                            </div>
-                        </div>
-                    </form>
-                    <p class="text-center mt-3 text-dark fs-6">If you have account, Please <a href="#">Sign in Now</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
 
+<body>
+
+    <!--  -->
+    <div class="container-fluid d-flex vh-100 justify-content-center align-items-center">
+       
+        <form id="myForm" class="p-4 fs-6 fw-bold bg-info border-3" style="width: 400px; border-radius: 20px;" action="index.html" method="get">
+            <div class="text-center mb-3 mt-4">
+                <h2>Create Your Account</h2>
+            </div>
+            <div class="input-group">
+                <label for="username" class="mb-2" style="margin-bottom: 20px 0;" >User Name</label>
+                <input type="text" name="username" class="form-control d-block w-100" id="username" placeholder="username">
+                <small>name must me 5 or 15 character</small>
+            </div>
+            <div class="input-group " style="margin-bottom: 20px 0;">
+                <label for="email" class="d-inline-block" style="margin-bottom: 5px; ">Email</label>
+                <input type="email" name="email" class="form-control d-block w-100" id="email" placeholder="email">
+                <small>provide a valid email address</small>
+            </div>
+            <div class="input-group " style="margin-bottom: 20px 0;" >
+                <label for="password" class="mb-2">Password</label>
+                <input type="password" name="password" class="form-control d-block w-100 " id="password" placeholder="password">
+                <small></small>
+            </div>
+            <div class="input-group" style="margin-bottom: 20px 0;" >
+                <label for="confirmpassword" class="mb-2">Confirmpassword</label>
+                <input type="password" name="confirmpassword" class="form-control d-block w-100 " id="confirmpassword" placeholder="confirmpassword">
+                <small></small>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Remember Me
+                    <p id="message"></p>
+                </label>
+              
+            </div>
+            <button class="btn btn-primary text-center" type="submit">
+                Login
+            </button>
+            <p class="text-center">Don't have an account?
+                
+                <span class="text-primary"><a href="./signin.html">Sign Up</a></span>
+            </p>
+            <p class="text-center text-primary">Forgot your password?</p>  
+         </form>
+
+    </div>
+    
+
+
+
+    <script src="../js/signin.js"></script>
 </body>
+
 </html>
