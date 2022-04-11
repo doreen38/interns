@@ -24,7 +24,6 @@ main{
     margin: 10px;
 }
 
-<<<<<<< HEAD
 .container-fluid{
  background-image: url(/img/71V5w9iF6TL._AC_SX679_.jpg);
    background-repeat: no-repeat;
@@ -85,7 +84,6 @@ main{
 	wdith: 100%;
 	padding: 10px;
 } */
-=======
 .dropdown-toggle::after {
     display: none;
     margin-left: 0.255em;
@@ -96,4 +94,3 @@ main{
     border-bottom: 0;
     border-left: 0.3em solid transparent;
 }
->>>>>>> 68180a4c8f6476b129407b5cba7bb2f845af4f30
