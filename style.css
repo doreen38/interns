@@ -11,10 +11,6 @@ body{
     height: 100vh;
     overflow: auto;
 }
-main{
-    height: 100vh;
-    position: relative;
-}
 .inputbox{
     position: absolute;
     bottom: 0;
@@ -24,68 +20,6 @@ main{
     margin: 10px;
 }
 
-<<<<<<< HEAD
-.container-fluid{
- background-image: url(/img/71V5w9iF6TL._AC_SX679_.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   
-}
-
-/* signin page styling */
-#error_msg {
-	margin-top: 5px;
-	width: 345px;
-	font-size: 18px;
-	color: #c62828;
-	text-align: center;
-	padding: 5px 8px;
-	border-radius: 3px;
-	/* border:1px solid #e74c3c; */
-	display:none ;
-}
- #error_pw {
-	margin-top: 5px;
-	width: 345px;
-	font-size: 18px;
-	color: #c62828;
-	text-align: center;
-	padding: 5px 8px;
-	border-radius: 3px;
-	/* border:1px solid #e74c3c; */
-	display:none ;
-}
-.input-group small{
-	
-	font-size: 12px;
-	height: 13px;
-	 color: red;
-	visibility: hidden;	 
-}
-.input-group input:focus{
- outline: 0;
-}
-.success input{
-	border: 3px solid green !important; 
-}
-.input-group small input{
-	border-color: red;
-}
-.error small{
-	visibility: visible;
-}
-.error input{
-	border:3px solid red;
-}
-/* .input-group .success {
-	border-color: green;
-} */
-/* .input-group input{
-	display: inline-block
-	wdith: 100%;
-	padding: 10px;
-} */
-=======
 .dropdown-toggle::after {
     display: none;
     margin-left: 0.255em;
@@ -96,4 +30,3 @@ main{
     border-bottom: 0;
     border-left: 0.3em solid transparent;
 }
->>>>>>> 68180a4c8f6476b129407b5cba7bb2f845af4f30
