@@ -1,44 +1,46 @@
-<form id="myForm" class="p-3 px-4 fs-6 fw-bold bg-transparent border-3" style="width: 400px; border-radius: 20px;"
-        action="index.html" method="get">
-        <div class="text-center mb-3">
-            <h2>Create Your Account</h2>
-        </div>
-        <div class="input-group">
-            <label for="username" class="mb-2" style="margin-bottom: 20px 0;">User Name</label>
-            <input type="text" name="username" class="form-control d-block w-100" id="username" placeholder="username">
-            <small>name must me 5 or 15 character</small>
-        </div>
-        <div class="input-group " style="margin-bottom: 20px 0;">
-            <label for="email" class="d-inline-block" style="margin-bottom: 5px; ">Email</label>
-            <input type="email" name="email" class="form-control d-block w-100" id="email" placeholder="email">
-            <small>provide a valid email address</small>
-        </div>
-        <div class="input-group " style="margin-bottom: 20px 0;">
-            <label for="password" class="mb-2">Password</label>
-            <input type="password" name="password" class="form-control d-block w-100 " id="password"
-                placeholder="password">
-            <small></small>
-        </div>
-        <div class="input-group" style="margin-bottom: 20px 0;">
-            <label for="confirmpassword" class="mb-2">Confirmpassword</label>
-            <input type="password" name="confirmpassword" class="form-control d-block w-100 " id="confirmpassword"
-                placeholder="confirmpassword">
-            <small></small>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Remember Me
-                <p id="message"></p>
-            </label>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="border-radius: 20px;">
+            <form id="myForm"  action="index.html" method="get">
+                <div class="text-center text-light mb-3">
+                    <h2>Create Your Account</h2>
+                </div>
+                <div class="input-group col-sm-12" style="margin-bottom: 20px 0;">
+                    <label for="username" class="mb-2 text-light" style="margin-bottom: 20px 0;">User Name</label>
+                    <input type="text" name="username" class="form-control d-block w-100" id="username" placeholder="username">
+                    <small>name must me 5 or 15 character</small>
+                </div>
+                <div class="input-group " style="margin-bottom: 20px 0;">
+                    <label for="email" class="d-inline-block text-light" style="margin-bottom: 5px;">Email</label>
+                    <input type="email" name="email" class="form-control d-block w-100" id="email" placeholder="email">
+                    <small>provide a valid email address</small>
+                </div>
+                <div class="input-group col-sm-12 " style="margin-bottom: 20px 0;">
+                    <label for="password" class="mb-2 text-light">Password</label>
+                    <input type="password" name="password" class="form-control d-block w-100 " id="password"
+                        placeholder="password">
+                    <small></small>
+                </div>
+                <div class="input-group col-sm-12" style="margin-bottom: 20px 0;">
+                    <label for="confirmpassword" class="mb-2 text-light">Confirmpassword</label>
+                    <input type="password" name="confirmpassword" class="form-control d-block w-100 " id="confirmpassword"
+                        placeholder="confirmpassword">
+                    <small></small>
+                </div>
+                <div class="form-check col-sm-12">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                        Remember Me
+                        <p id="message"></p>
+                    </label>
+        
+                </div>
+                <button class="btn btn-primary text-center" type="submit">
+                    Login
+                </button>
+                
+                    </form>
         </div>
-        <button class="btn btn-primary text-center" type="submit">
-            Login
-        </button>
-        <p class="text-center">Don't have an account?
-
-            <span class="text-primary"><a href="./signin.html">Sign Up</a></span>
-        </p>
-        <p class="text-center text-primary">Forgot your password?</p>
-    </form>
+    </div>
+</div>

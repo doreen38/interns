@@ -20,13 +20,12 @@ body{
     margin: 10px;
 }
 
-<<<<<<< HEAD
-.container-fluid{
+/* .container-fluid{
  background-image: url(/img/71V5w9iF6TL._AC_SX679_.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    
-}
+} */
 
 /* signin page styling */
 #error_msg {
@@ -73,16 +72,32 @@ body{
 .error input{
 	border:3px solid red;
 }
-/* .input-group .success {
-	border-color: green;
-} */
-/* .input-group input{
-	display: inline-block
-	wdith: 100%;
-	padding: 10px;
-} */
-=======
->>>>>>> ffa6f0862bddd5b905e3c553c8915650760fa223
+.input-group small{
+	
+	font-size: 12px;
+	height: 13px;
+	 color: red;
+	visibility: hidden;	 
+}
+.form-floating input:focus{
+ outline: 0;
+}
+.success input{
+	border: 3px solid green !important; 
+}
+.form-floating small input{
+	border-color: red;
+	font-size: 12px;
+	visibility: hidden;
+
+}
+.error small{
+	visibility: visible;
+}
+.error input{
+	border:3px solid red;
+}
+
 .dropdown-toggle::after {
     display: none;
     margin-left: 0.255em;

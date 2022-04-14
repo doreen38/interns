@@ -1,9 +1,9 @@
 const form = document.getElementById("myform");
-let email= document.getElementById("Input");
+let email= document.getElementById("email");
 let password= document.getElementById("Password");
 let error = document.getElementById("error_msg");
 let error2 = document.getElementById("error_pw")
-let ckecked = document.getElementById("check")
+let ckecked = document.getElementById("flexCheckDefault")
 let ckeckmessage= document.getElementById("message")
 
 

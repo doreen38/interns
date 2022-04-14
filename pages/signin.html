@@ -1,20 +1,22 @@
-<form id="myForm" class="p-4 fs-6 fw-bold bg-transparent border-3" style="width: 400px; border-radius: 20px;"
-        action="index.html" method="get">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form id="myForm" class="p-4 fs-6 fw-bold bg-transparent border-3 " action="index.html" method="get">
         <div class="text-center mb-3">
             <h2 class="text-light">Welcome Back</h2>
         </div>
-        <div class="input-group " style="margin-bottom: 20px 0;">
-            <label for="email" class="d-inline-block" style="margin-bottom: 5px; ">Email</label>
+        <div class="input-group col-sm-12 " style="margin-bottom: 20px 0;">
+            <label for="email" class="d-inline-block text-lght" style="margin-bottom: 5px;">Email</label>
             <input type="email" name="email" class="form-control rounded-3 d-block w-100" id="email" placeholder="email">
             <small>provide a valid email address</small>
         </div>
-        <div class="input-group " style="margin-bottom: 20px 0;">
-            <label for="password" class="mb-2">Password</label>
+        <div class="input-group col-sm-12 " style="margin-bottom: 20px 0;">
+            <label for="password" class="mb-2 text-light">Password</label>
             <input type="password" name="password" class="form-control rounded-3 d-block w-100 " id="password"
                 placeholder="password">
             <small></small>
         </div>
-        <div class="form-check d-flex mt-2">
+        <div class="form-check d-flex col-sm-12 mt-2">
             <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label text-light" for="flexCheckDefault">
                 Remember Me
@@ -25,8 +27,8 @@
         <button class="btn btn-primary text-center" type="submit">
             Login
         </button>
-        <p class="text-center text-light">Don't have an account?
-            <span class="text-primary"><a href="./signin.html">Sign Up</a></span>
-        </p>
-        <p class="text-center text-primary">Forgot your password?</p>
+        
     </form>
+        </div>
+    </div>
+</div>
