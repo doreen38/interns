@@ -15,7 +15,7 @@ form.addEventListener('click', function(e) {
     const form = document.getElementById("myform");
      let email= document.getElementById("floatingInput").value;
      let text = document.getElementById("text")
-     let pattern = ('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+     let pattern = ('[a-z-.0-9]+@[a-z]+\.[a-z]{2,3}');
 
      if (email.match(pattern)) {
         form.classList.add("vaild");
