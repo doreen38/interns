@@ -36,16 +36,17 @@
 
           <!-- Form  -->
           <form
-          id="myForm"
-          class="row justify-content-center bg-transparent border-3 p-4 g-3"
-        >
-          <div class="">
-            <div class="text-center mb-3">
-              <h2 class="text-primary">Welcome Back</h2>
-            </div>
+            id="myForm1"
+            class="row justify-content-center p-3"
+          >
+            <div class="">
+              <div class="row g-2">
+                <div class="text-center">
+                  <h2 class="text-primary">Create Your Account</h2>
+                </div>
 
-                 <!-- Username -->
-                 <div class="input-group">
+                <!-- Username -->
+                <div class="input-group">
                   <label for="username" class="text-primary my-1 fw-bolder">User Name</label>
                   <input
                     type="text"
@@ -56,7 +57,17 @@
                   />
                 </div>
 
-            </div>
+                <!-- Email -->
+                <div class="input-group">
+                  <label for="email" class="text-primary my-1 fw-bolder">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control d-block w-100 rounded"
+                    id="email"
+                    placeholder="cinfores@intern.com"
+                  />
+                </div>
 
                 <!-- Password -->
                 <div class="input-group">
@@ -70,50 +81,35 @@
                   />
                 </div>
 
-                <div class="row mt-4">
-
-                   <!-- Remember Me -->
-                  <div class="col-6">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckDefault"
-                      />
-                      <label
-                        class="form-check-label text-primary"
-                        for="flexCheckDefault"
-                      >
-                        Remember Me
-                        <p id="message"></p>
-                      </label>
-                  </div>
-
-                  <!-- Forgot your password -->
-                  <div class="col-6">
-                    <p class="text-danger text-end">Forgot your password?</p>
-                  </div>
-                </div>
+                <!-- Confirm Password -->
+                <div class="input-group">
+                  <label for="confirmpassword" class="text-primary my-1 fw-bolder"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    name="confirmpassword"
+                    class="form-control d-block w-100 rounded"
+                    id="confirmpassword"
+                    placeholder="confirm your password"
+                  />
                 </div>
 
-
-                <button
-                  class="btn btn-primary text-center rounded-pill px-4"
+                <a href="#"
+                  class="btn btn-primary text-center rounded-pill w-50 mx-auto my-4"
                   type="button"
-                  onclick="login()"
                 >
-                  Login
-                </button>
+                  Signup
+                </a>
 
-                <!-- Don't have an account -->
-              <p class="my-4">
-                Don't have an account? <a href="./signup.html" class="btn m-0 p-0 text-primary">Sign Up</a>
+                                <!-- Don't have an account -->
+              <p class="my-2 d-flex">
+                Already have an account? <a href="./index.html" class="btn m-0 p-0 text-primary mx-1">Sign In</a>
               </p>
 
-
-
-          </div>
-        </form>
+              </div>
+            </div>
+          </form>
         </section>
 
         <section class="col-7 d-none d-md-block bg-primary"></section>
