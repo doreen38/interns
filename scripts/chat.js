@@ -1,6 +1,7 @@
 let send = document.getElementById("sendbtn");
 let msgEl = document.getElementById("content");
 let disName = document.getElementById("displayname");
+let input = document.getElementById("typing");
 
 var pubnub = new PubNub({
     publishKey: "pub-c-17e22ec5-b9e3-4b38-900e-fb2f86d81b82",
@@ -36,6 +37,9 @@ pubnub.subscribe({
 
 send.addEventListener("click", e => {
     console.log(pubnub);
-    sendMessage(document.getElementById("typing").value);
-    document.getElementById("typing").value = "";
+    if(input.value == ''){
+        return;
+    }
+    sendMessage(input.value);
+    input.value = "";
 });
