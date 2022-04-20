@@ -20,88 +20,83 @@
   </head>
 
   <body>
-    <div
-      class="w-100 p-5 shadow-lg min-vh-100 d-flex"
-      style="background: url(./img/back.jpg) no-repeat; background-size: cover"
-    >
-      <div class="me-auto rounded-3 p-4 bg-white" style="width: fit-content">
-        <header>
-          <div class="d-flex align-items-center justify-content-center">
-            <div>
-              <button
-                class="btn btn-outline-primary px-4 rounded-pill"
-                onclick="signin()"
-              >
-                Signin
-              </button>
-            </div>
+    <main class="row min-vh-100 min-vw-100">
 
-            <div class="">
-              <img
-                src="./img/logo.png"
-                class="img-fluid"
-                width="200px"
-                alt="Logo image"
-              />
-            </div>
+        <section class="col-12 col-sm-12 col-md-5 col-lg-5 bg-white px-">
 
-            <div>
-              <button
-                class="btn btn-outline-primary px-4 rounded-pill"
-                onclick="signup()"
-              >
-                Signup
-              </button>
-            </div>
+          <!-- Logo  -->
+          <div class="text-center mt-3">
+            <img
+              src="./img/logo.jpeg"
+              class="img-fluid"
+              width="100px"
+              alt="Logo image"
+            />
           </div>
-        </header>
 
-        <!-- <form
+          <!-- Form  -->
+          <form
           id="myForm"
-          class="row justify-content-center bg-transparent border-3"
+          class="row justify-content-center bg-transparent border-3 p-4 g-3"
         >
           <div class="">
             <div class="text-center mb-3">
-              <h2 class="text-primary text-uppercase">Welcome Back</h2>
-            </div>
-            <div class="input-group" style="margin-bottom: 20px 0">
-              <label for="email" class="d-inline-block">Username</label>
-              <input
-                type="text"
-                name="text"
-                class="form-control rounded-3 d-block w-100 bg-transparent border-secondary text-dark"
-                id="username"
-                placeholder="@johndoe"
-              />
-            </div>
-            <div class="input-group py-3">
-              <label for="password" class="mb-2">Password</label>
-              <input
-                type="password"
-                name="password"
-                class="form-control rounded-3 d-block w-100 bg-transparent border-secondary text-dark"
-                id="password"
-                placeholder="Password"
-              />
-            </div>
-            <div class="form-check d-flex mt-2">
-              <input
-                class="form-check-input me-2"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label
-                class="form-check-label text-primary"
-                for="flexCheckDefault"
-              >
-                Remember Me
-                <p id="message"></p>
-              </label>
+              <h2 class="text-primary">Welcome Back</h2>
             </div>
 
-            <div class="row">
-              <div class="col-6">
+                 <!-- Username -->
+                 <div class="input-group">
+                  <label for="username" class="text-primary my-1 fw-bolder">User Name</label>
+                  <input
+                    type="text"
+                    name="username"
+                    class="form-control d-block w-100 rounded"
+                    id="username"
+                    placeholder="@username"
+                  />
+                </div>
+
+            </div>
+
+                <!-- Password -->
+                <div class="input-group">
+                  <label for="password" class="text-primary my-1 fw-bolder">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control d-block w-100 rounded"
+                    id="password"
+                    placeholder="password"
+                  />
+                </div>
+
+                <div class="row mt-4">
+
+                   <!-- Remember Me -->
+                  <div class="col-12 col-md-6 col-lg-6">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label
+                        class="form-check-label text-primary"
+                        for="flexCheckDefault"
+                      >
+                        Remember Me
+                        <p id="message"></p>
+                      </label>
+                  </div>
+
+                  <!-- Forgot your password -->
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <p class="text-danger text-lg-end">Forgot your password?</p>
+                  </div>
+                </div>
+                </div>
+
+
                 <button
                   class="btn btn-primary text-center rounded-pill px-4"
                   type="button"
@@ -109,85 +104,24 @@
                 >
                   Login
                 </button>
-              </div>
-              <div class="col-6">
-                <p class="text-primary text-end">Forgot your password?</p>
-              </div>
-            </div>
-          </div>
-        </form> -->
 
-        <form id="myForm1" class="row justify-content-center bg-transparent border-3">
-          <div class="">
-              
-            <div class="row g-3">
-              <div class="text-center mb-3">
-                <h2 class="text-primary">Create Your Account</h2>
-              </div>
-              <div class="input-group">
-                <label for="username" class="text-light">User Name</label>
-                <input
-                  type="text"
-                  name="username"
-                  class="form-control d-block w-100"
-                  id="username"
-                  placeholder="username"
-                />
-              </div>
-              <div class="input-group">
-                <label for="email" class="text-light">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control d-block w-100"
-                  id="email"
-                  placeholder="email"
-                />
-              </div>
-              <div class="input-group">
-                <label for="password" class="text-light">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  class="form-control d-block w-100"
-                  id="password"
-                  placeholder="password"
-                />
-              </div>
-              <div class="input-group">
-                <label for="confirmpassword" class="text-light"
-                  >Confirmpassword</label
-                >
-                <input
-                  type="password"
-                  name="confirmpassword"
-                  class="form-control d-block w-100"
-                  id="confirmpassword"
-                  placeholder="confirmpassword"
-                />
-              </div>
-
-              <button
-                class="btn btn-primary text-center rounded-pill"
-                type="button"
-                onclick="createUser()"
-              >
-                Login
-              </button>
-              <p class="text-center">
-                Don't have an account?
-
-                <span class="text-primary"
-                  ><a href="./signin.html">Sign Up</a></span
-                >
+                <!-- Don't have an account -->
+              <p class="my-4">
+                Don't have an account? <a href="./signup.html" class="btn m-0 p-0 text-primary">Sign Up</a>
               </p>
-            </div>
+
+
+
           </div>
         </form>
+        </section>
 
-      </div>
-    </div>
+        <section class="col-7 d-none d-md-block" style="background-image: url(./img/header.gif); background-position: center;">
+        </section>
+    </main>
 
+    <script src="./scripts/bootstrap.bundle.js"></script>
+    <script src="./scripts/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
       integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
