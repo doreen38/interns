@@ -21,98 +21,108 @@
 
   <body>
     <main class="row min-vh-100 min-vw-100">
+      <section class="col-12 col-sm-12 col-md-5 col-lg-5 bg-white px-">
+        <!-- Logo  -->
+        <div class="text-center mt-3">
+          <img
+            src="./img/logo.jpeg"
+            class="img-fluid"
+            width="100px"
+            alt="Logo image"
+          />
+        </div>
 
-        <section class="col-12 col-sm-12 col-md-5 col-lg-5 bg-white px-">
-
-          <!-- Logo  -->
-          <div class="text-center mt-3">
-            <img
-              src="./img/logo.jpeg"
-              class="img-fluid"
-              width="100px"
-              alt="Logo image"
-            />
-          </div>
-
-          <!-- Form  -->
-          <form
-            id="myForm1"
-            class="row justify-content-center p-3"
-          >
-            <div class="">
-              <div class="row g-2">
-                <div class="text-center">
-                  <h2 class="text-primary">Create Your Account</h2>
-                </div>
-
-                <!-- Username -->
-                <div class="input-group">
-                  <label for="username" class="text-primary my-1 fw-bolder">User Name</label>
-                  <input
-                    type="text"
-                    name="username"
-                    class="form-control d-block w-100 rounded"
-                    id="username"
-                    placeholder="@username"
-                  />
-                </div>
-
-                <!-- Email -->
-                <div class="input-group">
-                  <label for="email" class="text-primary my-1 fw-bolder">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control d-block w-100 rounded"
-                    id="email"
-                    placeholder="cinfores@intern.com"
-                  />
-                </div>
-
-                <!-- Password -->
-                <div class="input-group">
-                  <label for="password" class="text-primary my-1 fw-bolder">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    class="form-control d-block w-100 rounded"
-                    id="password"
-                    placeholder="password"
-                  />
-                </div>
-
-                <!-- Confirm Password -->
-                <div class="input-group">
-                  <label for="confirmpassword" class="text-primary my-1 fw-bolder"
-                    >Confirm Password</label
-                  >
-                  <input
-                    type="password"
-                    name="confirmpassword"
-                    class="form-control d-block w-100 rounded"
-                    id="confirmpassword"
-                    placeholder="confirm your password"
-                  />
-                </div>
-
-                <a href="#"
-                  class="btn btn-primary text-center rounded-pill w-50 mx-auto my-4"
-                  type="button"
-                >
-                  Signup
-                </a>
-
-                                <!-- Don't have an account -->
-              <p class="my-2 d-flex">
-                Already have an account? <a href="./index.html" class="btn m-0 p-0 text-primary mx-1">Sign In</a>
-              </p>
-
+        <!-- Form  -->
+        <form id="myForm1" class="row justify-content-center p-3">
+          <div class="">
+            <div class="row g-2">
+              <div class="text-center">
+                <h2 class="text-primary">Create Your Account</h2>
               </div>
-            </div>
-          </form>
-        </section>
 
-        <section class="col-7 d-none d-md-block bg-primary"></section>
+              <!-- Username -->
+              <div class="input-group">
+                <label for="username" class="text-primary my-1 fw-bolder"
+                  >User Name</label
+                >
+                <input
+                  type="text"
+                  name="username"
+                  class="form-control d-block w-100 rounded"
+                  id="username"
+                  placeholder="@username"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="input-group">
+                <label for="email" class="text-primary my-1 fw-bolder"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control d-block w-100 rounded"
+                  id="email"
+                  placeholder="cinfores@intern.com"
+                />
+              </div>
+
+              <!-- Password -->
+              <div class="input-group">
+                <label for="password" class="text-primary my-1 fw-bolder"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control d-block w-100 rounded"
+                  id="password"
+                  placeholder="password"
+                />
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="input-group">
+                <label for="confirmpassword" class="text-primary my-1 fw-bolder"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  name="confirmpassword"
+                  class="form-control d-block w-100 rounded"
+                  id="confirmpassword"
+                  placeholder="confirm your password"
+                />
+              </div>
+
+              <a
+                href="#"
+                class="btn btn-primary text-center rounded-pill w-50 mx-auto my-4"
+                type="button"
+              >
+                Signup
+              </a>
+
+              <!-- Don't have an account -->
+              <p class="my-2 d-flex">
+                Already have an account?
+                <a href="./index.html" class="btn m-0 p-0 text-primary mx-1"
+                  >Sign In</a
+                >
+              </p>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section
+        class="col-7 d-none d-md-block"
+        style="
+          background-image: url(./img/header.gif);
+          background-position: center;
+        "
+      ></section>
     </main>
 
     <script src="./scripts/bootstrap.bundle.js"></script>
