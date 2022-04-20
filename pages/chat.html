@@ -9,13 +9,13 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>Chat</title>
 </head>
 
-<body class="bg-dark">
+<body class="bg-light">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 p-0 border-end border-2 border-secondary min-vh-100 overflow-auto">
+        <div class="row parent">
+            <div class="col-md-3 p-0 border-end border-2 border-secondary min-vh-100 overflow-auto d-none d-md-inline">
                 <header class="sticky-top shadow-sm p-3">
                     <div class="row g-3">
                         <div class="col-12 d-flex justify-content-between align-items-center">
@@ -24,9 +24,11 @@
                                 class=" btn btn-outline-secondary p-1 rounded-pill d-flex justify-content-center align-items-center"><i
                                     class='bx bx-user h5 m-0'></i></button>
                         </div>
-                        <div class="col-10 searchbox border border-3 border-secondary rounded-pill d-flex justify-content-between align-items-center py-1">
+                        <div
+                            class="col-10 searchbox border border-3 border-secondary rounded-pill d-flex justify-content-between align-items-center py-1">
                             <i class='bx bx-search text-secondary h6 m-0'></i>
-                            <input type="search" class="bg-transparent border-0 w-100 text-secondary" aria-autocomplete="true" placeholder="People, Groups, Messages">
+                            <input type="search" class="bg-transparent border-0 w-100 text-secondary"
+                                aria-autocomplete="true" placeholder="People, Groups, Messages">
                         </div>
                         <div class="col-2 d-flex justify-content-end align-items-center ">
                             <button
@@ -39,11 +41,14 @@
                 </header>
             </div>
 
-            <div class="col-md-9 p-0">
-                <header class="p-3 shadow-sm sticky-top d-flex justify-content-between align-items-center">
+            <div class="chat col-md-9 p-0">
+                <header class="shadow-sm sticky-top d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center justify-content-center">
-                        <i class='bx bx-user text-secondary h5 m-0'></i>
-                        <h4 class="text-light m-0">Name</h4>
+                        <button class='btn btn-outline-dark me-2 p-1 d-flex align-items-center justify-content-center border-0'>
+                            <i class="bx bx-menu text-secondary h4 m-0"></i>
+
+                        </button>
+                        <h4 class="m-0" id="displayname">Name</h4>
                     </div>
                     <div class="d-flex">
                         <button
@@ -54,24 +59,27 @@
                                 class='bx bx-camera h5 m-0'></i></button>
                     </div>
                 </header>
-                <main id="main">
-                    <div id="content" class="">
+                <main>
+                    <div id="content" class="text-black">
 
                     </div>
 
-                    <form
-                        class="input bg-dark border border-2 border-secondary rounded-pill px-2 d-flex align-items-center" id="form">
+                    <div
+                        class="input bg-dark border border-2 border-secondary rounded-pill px-2 d-flex align-items-center"
+                        id="form">
                         <i class='bx bx-smile h2 m-0 text-secondary'></i>
                         <input type="text" class="bg-transparent border-0 p-2 text-light" id="typing">
-                        <button class="btn bg-transparent p-0 d-flex align-items-center justify-content-center">
-                            <i class='bx bx-send h2 m-0 text-secondary' type="submit"></i>
+                        <button class="btn bg-transparent p-0 d-flex align-items-center justify-content-center"
+                            id="sendbtn">
+                            <i class='bx bx-send h2 m-0 text-secondary'></i>
                         </button>
-                    </form>
-                </main>
+                    </div>
+                </main>                             
             </div>
         </div>
     </div>
 
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.5.0.1.js"></script>
     <script src="../js/chat.js"></script>
 </body>
 
