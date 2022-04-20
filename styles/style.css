@@ -27,7 +27,6 @@ body{
     background-color: #f1f1f1;
 }
 .chat main{
-    border-top:  2px solid black;
     position: relative;
     height: 90vh;
     width: 100%;
