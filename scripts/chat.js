@@ -3,6 +3,14 @@ let msgEl = document.getElementById("content");
 let disName = document.getElementById("displayname");
 let input = document.getElementById("typing");
 
+
+let open = document.getElementById("my-menu");
+
+
+open.addEventListener("click", function(e){
+    document.querySelector("body").classList.toggle("active")
+})
+
 var pubnub = new PubNub({
     publishKey: "pub-c-17e22ec5-b9e3-4b38-900e-fb2f86d81b82",
     subscribeKey: "sub-c-bb554d48-bbf5-11ec-b9a7-7ec486788b75",
@@ -43,3 +51,4 @@ send.addEventListener("click", e => {
     sendMessage(input.value);
     input.value = "";
 });
+
