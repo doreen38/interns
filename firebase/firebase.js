@@ -1,4 +1,10 @@
-import {initializeApp} from "firebase/app";
+import { initializeApp } from "firebase/app";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut
+} from 'firebase/auth';
 
 
 const firebaseConfig = {
@@ -16,5 +22,47 @@ initializeApp(firebaseConfig);
 
 // initialize services
 const db = getFirestore();
+const auth = getAuth();
+
+// create user
+const form = document.querySelector(".signinform");
+
+form.addEventListener('submit', () => {
+  const email = form.email.value;
+  const password = form.password.value;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+      alert('User Created', cred.user);
+      window.location.href = "../pages/chat.html";
+    })
+    .catch(err => console.log(err.message));
+})
+
+// login user
+const login = document.querySelector(".loginform")
+
+login.addEventListener("submit", () => {
+  const email = login.email.value;
+  const password = login.password.value
+
+  signInWithEmailAndPassword(auth, email, password)
+  .then((cred) => {
+    alert("User Loged In", cred.user)
+    window.location.href = "../pages/chat.html";
+  })
+  .catch(err => console.log(err.message));
+})
+
+// logout user
+function logout() {
+  signOut(auth)
+  .then(()=>{
+    alert('User logout');
+  })
+  .catch(err => console.log(err.message));
+}
+
+
 
 
