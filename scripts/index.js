@@ -1,6 +1,10 @@
 function login() {
-    if(!$("#email").val() && !$("#password").val()){
-        alert("Please fill all the fields");
+    if (!$("#email").val() && !$("#password").val()) {
+        Swal.fire({
+            icon: "info",
+            text: "All Fields Must Be Filled",
+            timer: 1000
+        })
         return;
     }
     window.location.href = "./pages/chat.html";
@@ -17,7 +21,7 @@ function createUser() {
     console.log(pubnub);
 
     pubnub.createUser()
-} 
+}
 
 function signin() {
     $("#myForm").addClass("d-flex");
