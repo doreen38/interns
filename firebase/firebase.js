@@ -37,45 +37,59 @@ const Toast = Swal.mixin({
 
 
 // create user
-const form = document.querySelector("#LoginForm");
+const signupForm = document.querySelector("#signup");
 
-form.addEventListener('submit', (e) => {
+signupForm?.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  const email = form.email.value;
-  const password = form.password.value;
+  const username = signupForm.username.value;
+  const email = signupForm.email.value;
+  const password = signupForm.password.value;
+  const confirmPassword = signupForm.confirmpassword.value;
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((cred) => {
-      Toast.fire({
-        icon: "success",
-        title: "User Created",
-      }).then(() => {
-        console.log("user created", cred.user)
-        window.location.href = "../interns/pages/chat.html"
-      })
-
+  if (email === '' && password === '') {
+    
+    Toast.fire({
+      icon: 'error',
+      title: 'All fields must be filled'
     })
-    .catch(err => console.log(err.message));
+  }else if (password !== confirmPassword) {
+    Toast.fire({
+      icon: 'error',
+      title: 'Password does not match'
+    })
+  } else {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((cred) => {
+        Toast.fire({
+          icon: "success",
+          title: "User Created",
+        }).then(() => {
+          console.log("user created", cred.user)
+          window.location.href = "./chat.html"
+        })
+      })
+      .catch(err => console.log(err.message));
+  }
 })
 
 
+// login user
+const loginForm = document.querySelector("#login");
 
+loginForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  const email = loginForm.email.value;
+  const password = loginForm.password.value
 
-// // login user
-// const login = document.querySelector(".loginform")
-
-// login.addEventListener("submit", () => {
-//   const email = login.email.value;
-//   const password = login.password.value
-
-//   signInWithEmailAndPassword(auth, email, password)
-//   .then((cred) => {
-//     alert("User Loged In", cred.user)
-//     window.location.href = "../pages/chat.html";
-//   })
-//   .catch(err => console.log(err.message));
-// })
+  signInWithEmailAndPassword(auth, email, password)
+  .then((cred) => {
+    alert("User Loged In", cred.user)
+    window.location.href = "../pages/chat.html";
+  })
+  .catch(err => console.log(err.message));
+})
 
 // logout user
 function logout() {
