@@ -42,13 +42,15 @@ main header{
   width: 100%;
 }
 
-.input {
-  width: 50%;
+.float {
+  width: 60%;
   position: absolute;
   bottom: 5px;
   left: 40px;
 }
-
+.input{
+  width: 80%;
+}
 input[type=text] {
   outline: 0;
   width: 100%;
