@@ -3,8 +3,21 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
+  onAuthStateChanged
 } from 'firebase/auth';
+
+
+document.addEventListener("load", () => {
+  onAuthStateChanged(auth, (user) => {
+      if (user) {
+          const uid = user.uid;
+          const email = user.email;
+
+          console.log(uid);
+      }
+  })
+})
 
 const firebaseConfig = {
   apiKey: "AIzaSyANiF-HPk8rNhB-dDiX5hAzEIXIBrAUf9s",
@@ -17,10 +30,10 @@ const firebaseConfig = {
 };
 
 //   initialize firebase app
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // initialize services
-const auth = getAuth();
+export const auth = getAuth(app);
 
 // Sweet alert toast  
 const Toast = Swal.mixin({
@@ -65,13 +78,18 @@ signupForm?.addEventListener('submit', (e) => {
           icon: "success",
           title: "User Created",
         }).then(() => {
-          console.log("user created", cred.user)
+          const user = cred.user;
           window.location.href = "./chat.html"
+
         })
       })
       .catch(err => console.log(err.message));
   }
 })
+
+// User Auth state
+
+
 
 
 // login user
@@ -79,13 +97,15 @@ const loginForm = document.querySelector("#login");
 
 loginForm?.addEventListener("submit", (e) => {
   e.preventDefault();
-  
+
   const email = loginForm.email.value;
   const password = loginForm.password.value
 
   signInWithEmailAndPassword(auth, email, password)
   .then((cred) => {
     alert("User Loged In", cred.user)
+    const user = cred.user;
+
     window.location.href = "../pages/chat.html";
   })
   .catch(err => console.log(err.message));
