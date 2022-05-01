@@ -1,23 +1,11 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
-} from 'firebase/auth';
+  updateProfile
+} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
-
-document.addEventListener("load", () => {
-  onAuthStateChanged(auth, (user) => {
-      if (user) {
-          const uid = user.uid;
-          const email = user.email;
-
-          console.log(uid);
-      }
-  })
-})
 
 const firebaseConfig = {
   apiKey: "AIzaSyANiF-HPk8rNhB-dDiX5hAzEIXIBrAUf9s",
@@ -33,7 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // initialize services
-export const auth = getAuth(app);
+const auth = getAuth(app);
 
 // Sweet alert toast  
 const Toast = Swal.mixin({
@@ -61,36 +49,42 @@ signupForm?.addEventListener('submit', (e) => {
   const confirmPassword = signupForm.confirmpassword.value;
 
   if (email === '' && password === '') {
-    
+
     Toast.fire({
       icon: 'error',
       title: 'All fields must be filled'
     })
-  }else if (password !== confirmPassword) {
+  } else if (password !== confirmPassword) {
     Toast.fire({
       icon: 'error',
       title: 'Password does not match'
     })
   } else {
     createUserWithEmailAndPassword(auth, email, password)
-      .then((cred) => {
-        Toast.fire({
-          icon: "success",
-          title: "User Created",
-        }).then(() => {
-          const user = cred.user;
-          window.location.href = "./chat.html"
+      .then(function (cred) {
+        console.log(cred.user);
 
+        return updateProfile(cred.user, {
+          displayName: username
         })
-      })
-      .catch(err => console.log(err.message));
+          .then(() => {
+            Toast.fire({
+              icon: 'success',
+              title: 'Account created successfully'
+            })
+              .then(() => {
+                window.location.href = "../pages/chat.html";
+                signupForm.reset();
+              })
+          })
+      }).catch((error) => {
+        Toast.fire({
+          icon: 'error',
+          title: error.message
+        })
+      });
   }
 })
-
-// User Auth state
-
-
-
 
 // login user
 const loginForm = document.querySelector("#login");
@@ -102,24 +96,23 @@ loginForm?.addEventListener("submit", (e) => {
   const password = loginForm.password.value
 
   signInWithEmailAndPassword(auth, email, password)
-  .then((cred) => {
-    alert("User Loged In", cred.user)
-    const user = cred.user;
-
-    window.location.href = "../pages/chat.html";
-  })
-  .catch(err => console.log(err.message));
+    .then((cred) => {
+      Toast.fire({
+        icon: "success",
+        title: "User Loged In"
+      })
+        .then(() => {
+          window.location.href = "./pages/chat.html";
+        })
+    })
+    .catch((error) => {
+      Toast.fire({
+        icon: 'error',
+        title: error.message
+      })
+    });
 })
 
-// logout user
-function logout() {
-  signOut(auth)
-    .then(() => {
-      alert('User logout');
-    })
-    .catch(err => console.log(err.message));
-}
 
 
-
-
+export { auth, Toast }

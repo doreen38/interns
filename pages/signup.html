@@ -16,7 +16,7 @@
 <body>
   <main class="container-fluid">
     <div class="row min-vh-100">
-      <section class="col-12 col-sm-12 col-md-5 col-lg-5px-3">
+      <section class="col-12 col-sm-12 col-md-5 col-lg-5px-3 bg-light">
         <!-- Logo  -->
         <div class="text-center mt-3">
           <img src="../img/logo.jpeg" class="img-fluid" width="100px" alt="Logo image" />
@@ -34,28 +34,28 @@
               <div class="input-group">
                 <label for="username" class="text-primary my-1 fw-bolder">User Name</label>
                 <input type="text" name="username" class="form-control d-block w-100 rounded" id="username"
-                  placeholder="@username" />
+                  placeholder="username" required/>
               </div>
 
               <!-- Email -->
               <div class="input-group">
                 <label for="email" class="text-primary my-1 fw-bolder">Email</label>
                 <input type="email" name="email" class="form-control d-block w-100 rounded" id="email"
-                  placeholder="cinfores@intern.com" />
+                  placeholder="user@gmail.com" required/>
               </div>
 
               <!-- Password -->
               <div class="input-group">
                 <label for="password" class="text-primary my-1 fw-bolder">Password</label>
                 <input type="password" name="password" class="form-control d-block w-100 rounded" id="password"
-                  placeholder="password" />
+                  placeholder="password" minlength="6"required/>
               </div>
 
               <!-- Confirm Password -->
               <div class="input-group">
                 <label for="confirmpassword" class="text-primary my-1 fw-bolder">Confirm Password</label>
                 <input type="password" name="confirmpassword" class="form-control d-block w-100 rounded"
-                  id="confirmpassword" placeholder="confirm your password" />
+                  id="confirmpassword" placeholder="confirm your password" minlength="6required"/>
               </div>
 
               <button class="btn btn-primary text-center rounded-pill w-50 mx-auto my-4" type="submit">
@@ -85,7 +85,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.5.0.1.js"></script>
   <script src=" https://cdn.pubnub.com/sdk/javascript/pubnub.5.0.1.min.js"></script>
-  <script src="../scripts/firebase.js"></script>
+  <script src="../firebase/firebase.js" type="module"></script>
 </body>
 
 </html>
