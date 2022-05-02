@@ -15,7 +15,7 @@
 <body class="bg-dark">
   <div class="container-fluid">
     <div class="row">
-      <aside class="col-md-3 min-vh-100 border-end border-1 border-secondary">
+      <aside class="col-md-4 col-lg-3 min-vh-100 border-end border-1 border-secondary">
         <header class="container-fluid py-3 px-1">
           <div class="row g-3">
             <div class="col-12 search1 d-flex align-items-center justify-content-center p-2 rounded-3">
@@ -23,104 +23,89 @@
                 placeholder="Search for People, Groups etc">
               <i class='bx bx-search text-light fw-bold h4 m-0'></i>
             </div>
-            
+
             <div class="col-12 highlight p-2 d-flex align-items-center justify-content-between">
               <div class="container">
                 <div class="row align-items-center">
-                  <h4 class="col-6 text-white m-0 fw-bold text-capitalize" id="displayName">UserName</h4>
+                  <h4 class="col-6 text-transparent m-0 fw-bold text-capitalize" id="displayName">UserName</h4>
 
                   <div class="dropdown col-6">
-                    <button class="btn btn-transparent dropdown-toggle m-0 d-flex align-items-center justify-content-center ms-auto" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn btn-transparent dropdown-toggle m-0 d-flex align-items-center justify-content-center ms-auto"
+                      type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       <i class="bx bx-cog h4 m-0"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       <li><a class="dropdown-item" href="#">Profile</a></li>
                       <li><a class="dropdown-item" href="#">Setting</a></li>
-                      <li><button class="form-control btn border-2 p-1 rounded-3 d-flex justify-content-center align-items-center" id="logout"><i
-                        class='text-danger bx bx-exit h5 m-0'></i>
-                    </button></li>
+                      <li><button
+                          class="form-control btn border-2 p-1 rounded-3 d-flex justify-content-center align-items-center"
+                          id="logout"><i class='text-danger bx bx-exit h5 m-0'></i>
+                        </button></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
 
+
+          </div>
+        </header>
+
+        <main class="rounded">
+          <div class="container rounded">
+            <h4>Dm's</h4>
+            <div class="row rounded">
             
+            </div>
           </div>
-        </header>
-      </aside>
-      <main class="main col-md-9 min-vh-100"></main>
-
-
-
-
-      <!-- <aside class="sidebar" id="my-bar">
-
-        <div class="row g-3">
-          
-          <div
-            class="col-10 searchbox border border-3 border-primary rounded-pill d-flex justify-content-between align-items-center py-1">
-            <i class='bx bx-search text-secondary h6 m-0'></i>
-            <input type="search" class="bg-transparent border-0 w-100 text-primary" aria-autocomplete="true"
-              placeholder="People, Groups, Messages">
-          </div>
-          <div class="col-2 d-flex justify-content-end align-items-center">
-            <button class=" btn btn-outline-primary border-2 p-1 rounded-3 d-flex justify-content-center align-items-center"><i
-                class='bx bx-plus h5 m-0'></i>
-            </button>
-          </div>
-        </div>
+        </main>
       </aside>
 
-      <main>
-        <header class="shadow-sm sticky-top d-flex justify-content-between align-items-center p-3">
-          <div class="d-flex align-items-center justify-content-center">
-            <button
-              class='menubtn btn btn-outline-light me-2 p-1 d-flex align-items-center justify-content-center border-0'
-              id="my-men">
-              <i class="bx bx-menu h3 text-primary fw-bold m-0"></i>
-            </button>
-            <h4 class="m-0 text-primary fw-bold" id="displayname">Name</h4>
-          </div>
-          <div class="d-flex">
-            <button
-              class=" btn btn-outline-primary p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
-                class='bx bx-phone h5 m-0'></i></button>
-            <button
-              class="ms-2 btn btn-outline-primary p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
-                class='bx bx-camera h5 m-0'></i></button>
-          </div>
+      <main class="main col-md-8 col-lg-9 min-vh-100">
+        <header>
+
         </header>
+        <main class="main">
+          <header class="bg-dark shadow-sm sticky-top d-flex justify-content-between align-items-center p-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <h4 class="m-0 text-transparent fw-bold" id="displayname">Name</h4>
+            </div>
+            <div class="d-flex">
+              <button
+                class=" btn btn-outline-transparent p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
+                  class='bx bx-phone h5 m-0'></i></button>
+              <button
+                class="ms-2 btn btn-outline-transparent p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
+                  class='bx bx-camera h5 m-0'></i></button>
+            </div>
+          </header>
 
-        <div id="content" class="text-black">
-          <h1>helo</h1>
-        </div> 
+          <footer class="float bg-dark rounded-pill d-flex align-items-center justify-content-between">
+            <div
+              class="input  rounded-pill px-2 d-flex justify-content-between align-items-center">
+              <i class='bx bx-smile h2 m-0'></i>
+              <input type="text" class="bg-transparent border-0 p-2 text-light" id="typing">
+              <button class="btn btn-outline-dark border-0 p-0 d-flex align-items-center justify-content-center" id="sendbtn">
+                <i class='bx bx-send h2 m-0'></i>
+              </button>
+            </div>
+            <div class="d-flex">
+              <button
+                class="ms-3 btn btn-outline-dark p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
+                  class='bx bx-microphone h4 m-0'></i></button>
+              <button
+                class="ms-3 btn btn-outline-dark p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
+                  class='bx bx-file-find h4 m-0'></i></button>
+              <button
+                class="ms-3 btn btn-outline-dark p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
+                  class='bx bx-camera h4 m-0'></i></button>
+            </div>
+          </footer>
+        </main>
 
-        <div class="float d-flex align-items-center justify-content-between">
-          <div
-            class="input border border-2 border-primary rounded-pill px-2 d-flex justify-content-between align-items-center">
-            <i class='bx bx-smile h2 m-0 text-primary'></i>
-            <input type="text" class="bg-transparent border-0 p-2" id="typing">
-            <button class="btn bg-transparent p-0 d-flex align-items-center justify-content-center" id="sendbtn">
-              <i class='bx bx-send h2 m-0 text-primary'></i>
-            </button>
-          </div>
-          <div class="d-flex">
-            <button
-              class="ms-3 btn btn-outline-primary p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
-                class='bx bx-microphone h3 m-0'></i></button>
-            <button
-              class="ms-3 btn btn-outline-primary p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
-                class='bx bx-file-find h3 m-0'></i></button>
-            <button
-              class="ms-3 btn btn-outline-primary p-1 border-2 rounded-pill d-flex justify-content-center align-items-center"><i
-                class='bx bx-camera h3 m-0'></i></button>
+      </main>
 
-
-          </div>
-        </div>
-    </div>
-    </main> -->
     </div>
   </div>
 

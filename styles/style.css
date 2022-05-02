@@ -18,13 +18,25 @@ button{
   background-color: var(--bg-dark);
 }
 
+aside main {
+  color: var(--bg-dark);
+}
+
+aside main .row{
+  height: 70vh;
+}
+
 .highlight{
   background-color: var(--highlight);
   border-radius: 10px;
 }
 
-main{
+main.main{
   background-color: var(--bg-dark);
+}
+.main header,
+.main header i{
+  color: var(--bg-dark);
 }
 
 .dropdown-toggle::after {
@@ -44,14 +56,22 @@ main{
   background-color: #f1f1f1;
 }
 .float {
-  width: 60%;
+  width: 40%;
+  padding: 3px;
   position: absolute;
   bottom: 5px;
-  left: 40px;
+  left: 360px;
+}
+
+.float button {
+  color: var(--bg-dark);
+  border: 2px solid var(--bg-dark);
 }
 
 .input {
   width: 80%;
+  border: 2px solid var(--bg-dark);
+  color: var(--bg-dark);
 }
 
 input[type=text] {
@@ -63,14 +83,10 @@ input[type=search] {
   outline: 0;
 }
 
-.sidebar {
-  height: 100vh;
-  width: 314px;
-  position: fixed;
-  z-index: -1;
-  opacity: .9;
-  left: 0;
-  padding-top: 20px;
-  transition: 0.1s ease-in-out;
-  border-right: 2px solid #2c2c2c;
+.dropdown-menu.show{
+  display: block;
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(-30px, 45px) !important;
 }
