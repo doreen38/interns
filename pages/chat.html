@@ -16,7 +16,7 @@
   <div class="container-fluid">
     <div class="row">
       <aside class="col-md-4 col-lg-3 min-vh-100 border-end border-1 border-secondary">
-        <header class="container-fluid py-3 px-1">
+        <header class="container-fluid py-3 shadow-sm sticky-top bg-dark px-2">
           <div class="row g-3">
             <div class="col-12 search1 d-flex align-items-center justify-content-center p-2 rounded-3">
               <input type="search" name="" id="" class="bg-transparent text-light fw-bold border-0"
@@ -52,11 +52,35 @@
           </div>
         </header>
 
-        <main class="rounded">
-          <div class="container rounded">
-            <h4>Dm's</h4>
-            <div class="row rounded">
-            
+        <main class="d-flex flex-column">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center border-bottom border-1 border-secondary">
+                  <h5 m-0>Channels</h5>
+                  <button
+                    class="btn btn-transparent text-black fw-bold d-flex align-items-center justify-content-center m-0"><i
+                      class="bx bx-plus h4 m-0"></i></button>
+                </div>
+                <div class="row channels p-1">
+                  <div class="col-12 highlight my-1">
+                    <p class="m-0 p-2"><b>Group Name</b></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center border-bottom border-1 border-secondary">
+                  <h5 m-0>Direct Messages</h5>
+                  <button
+                    class="btn btn-transparent text-black fw-bold d-flex align-items-center justify-content-center m-0"><i
+                      class="bx bx-plus h4 m-0"></i></button>
+                </div>
+                <div class="row dms p-1">
+                  <div class="col-12 highlight my-1">
+                    <p class="m-0 p-2"><b>User Name</b></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>
@@ -81,12 +105,16 @@
             </div>
           </header>
 
+          <div id="messages" class="text-white p-5">
+
+          </div>
+
           <footer class="float bg-dark rounded-pill d-flex align-items-center justify-content-between">
-            <div
-              class="input  rounded-pill px-2 d-flex justify-content-between align-items-center">
+            <div class="input  rounded-pill px-2 d-flex justify-content-between align-items-center">
               <i class='bx bx-smile h2 m-0'></i>
               <input type="text" class="bg-transparent border-0 p-2 text-light" id="typing">
-              <button class="btn btn-outline-dark border-0 p-0 d-flex align-items-center justify-content-center" id="sendbtn">
+              <button class="btn btn-outline-dark border-0 p-0 d-flex align-items-center justify-content-center"
+                id="sendbtn">
                 <i class='bx bx-send h2 m-0'></i>
               </button>
             </div>

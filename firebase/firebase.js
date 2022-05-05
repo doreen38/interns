@@ -63,7 +63,6 @@ signupForm?.addEventListener('submit', (e) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(function (cred) {
         console.log(cred.user);
-
         return updateProfile(cred.user, {
           displayName: username
         })

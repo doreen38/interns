@@ -10,6 +10,7 @@ body {
   width: 100%;
 }
 
+
 button{
   outline: 0;
 }
@@ -18,21 +19,43 @@ button{
   background-color: var(--bg-dark);
 }
 
-aside main {
-  color: var(--bg-dark);
+aside{
+  height: 100vh;
+  overflow-y: scroll;
 }
 
-aside main .row{
-  height: 70vh;
+aside::-webkit-scrollbar{
+  width: 5px;
+  background-color: var(--bg-dark);
+}
+
+aside::-webkit-scrollbar-thumb{
+  background-color: var(--bg-light);
+}
+
+aside main {
+  color: var(--bg-dark);
 }
 
 .highlight{
   background-color: var(--highlight);
   border-radius: 10px;
+  height: max-content;
+}
+
+.channels, .dms{
+  height: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.channels::-webkit-scrollbar, .dms::-webkit-scrollbar{
+  display: none;
 }
 
 main.main{
   background-color: var(--bg-dark);
+  max-height: 100vh;
 }
 .main header,
 .main header i{
@@ -43,18 +66,6 @@ main.main{
   display: none;
 }
 
-.chat {
-  display: grid;
-  grid-template-rows: 10% 90%;
-}
-
-.chat header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f1f1f1;
-}
 .float {
   width: 40%;
   padding: 3px;

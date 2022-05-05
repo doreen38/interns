@@ -1,6 +1,4 @@
 
-
-
 let send = document.getElementById("sendbtn");
 let msgEl = document.getElementById("content");
 let disName = document.getElementById("displayname");
@@ -24,7 +22,7 @@ function sendMessage(txt) {
 }
 pubnub.addListener({
     message: function (msg) {
-        msgEl.innerHTML += `
+        div.innerHTML += `
         <div class="message-content bg-info">
             <div class="message-sender">${msg.message.sender}</div>
                 <p>${msg.message.description}</p>
