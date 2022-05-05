@@ -6,7 +6,13 @@ import {
 import {
     auth,
     Toast
-} from "./firebase.js"
+} from "./firebase.js";
+
+
+import {
+    subKey,
+    pubKey
+} from "../utills/Keys.js"
 
 
 onAuthStateChanged(auth, (user) => {
@@ -25,11 +31,13 @@ onAuthStateChanged(auth, (user) => {
 
 
         const pubnub = new PubNub({
-            subscribeKey: "sub-c-985a5edc-c78f-11ec-ad82-a6fdca316470",
-            publishKey: "pub-c-93d9afad-053b-4fdc-bdc6-cf0b49556749",
+            subscribeKey: subKey,
+            publishKey: pubKey,
             // logVerbosity: true,
             uuid: `${uid}`
         });
+
+
 
 
         function sendMessage(txt) {
@@ -67,6 +75,26 @@ onAuthStateChanged(auth, (user) => {
             sendMessage(input.value);
             input.value = "";
         });
+
+
+        function createChannel() {
+            const channels = document.getElementById('channels');
+            const channel = document.createElement('div');
+            channel.innerHTML = `
+                <div class="col-12 highlight my-1">
+                    <p class="m-0 p-2"><b>Group Name</b></p>
+                </div>
+            `
+
+            channels.appendChild(channel);
+                
+        }
+
+        const channelbtn = document.getElementById('channelbtn');
+        channelbtn.addEventListener('click', (e) => {
+            createChannel();
+        });
+
     } else {
         return;
     }
@@ -99,3 +127,5 @@ let logoutbtn = document.querySelector("#logout")
 logoutbtn.addEventListener("click", (e) => {
     logout()
 })
+
+
