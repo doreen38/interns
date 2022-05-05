@@ -49,6 +49,21 @@ onAuthStateChanged(auth, (user) => {
             })
         }
 
+        // send files
+
+        function sendFile(files) {
+            pubnub.sendFile({
+                channel: "my_channel",
+                file: files,
+            })
+        }
+
+        const filebtn = document.querySelector('input[file]');
+        filebtn?.addEventListener('change', () => {
+            const file = input.files[0];
+            sendFile(file);
+        });
+
         pubnub.addListener({
             message: function (msg) {
                 const div = document.createElement("div");
@@ -73,22 +88,6 @@ onAuthStateChanged(auth, (user) => {
             }
             sendMessage(input.value);
             input.value = "";
-        });
-
-
-        // send files
-
-        const filebtn = document.querySelector('input[file]');
-
-        filebtn?.addEventListener('change', async () => {
-            const file = input.files[0];
-
-            const result = await pubnub.sendFile({
-                channel: 'my_channel',
-                file: file,
-            });
-
-            sendMessage(result);
         });
 
         // create channel
