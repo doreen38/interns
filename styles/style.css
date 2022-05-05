@@ -101,3 +101,18 @@ input[type=search] {
   margin: 0px;
   transform: translate(-30px, 45px) !important;
 }
+
+.file-label{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-upload {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  visibility: hidden;
+}

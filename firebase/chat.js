@@ -37,9 +37,7 @@ onAuthStateChanged(auth, (user) => {
             uuid: `${uid}`
         });
 
-
-
-
+        // send message
         function sendMessage(txt) {
 
             pubnub.publish({
@@ -64,6 +62,7 @@ onAuthStateChanged(auth, (user) => {
             }
         });
 
+        // subscrbe to channel
         pubnub.subscribe({
             channels: ["my_channel"],
         });
@@ -77,17 +76,36 @@ onAuthStateChanged(auth, (user) => {
         });
 
 
+        // send files
+
+        const filebtn = document.querySelector('input[file]');
+
+        filebtn?.addEventListener('change', async () => {
+            const file = input.files[0];
+
+            const result = await pubnub.sendFile({
+                channel: 'my_channel',
+                file: file,
+            });
+
+            sendMessage(result);
+        });
+
+        // create channel
         function createChannel() {
             const channels = document.getElementById('channels');
             const channel = document.createElement('div');
             channel.innerHTML = `
-                <div class="col-12 highlight my-1">
+                <div class="col-12 highlight my-1 d-flex justify-content-between">
                     <p class="m-0 p-2"><b>Group Name</b></p>
+                    <button class="btn btn-transparent text-black fw-bold d-flex align-items-center justify-content-center m-0">
+                        <i class="bx bx-dots-vertical-rounded h4 m-0"></i>
+                    </button>
                 </div>
             `
 
             channels.appendChild(channel);
-                
+
         }
 
         const channelbtn = document.getElementById('channelbtn');
